@@ -24,6 +24,10 @@ const handleTextChange = async (text, setWikiContent) => {
     "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=";
   let searchResponse = await fetch(searchUrl + text);
   let search = await searchResponse.json();
+  if (search[1][1] === undefined) {
+    setWikiContent("Did not find what you searched for.");
+    return;
+  }
   let title1 = search[1][1];
 
   let contentResponse = await fetch(contextUrl + title1);
