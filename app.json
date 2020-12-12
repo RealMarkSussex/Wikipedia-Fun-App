@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Maths-App",
-    "slug": "Maths-App",
+    "name": "Wikipedia-App",
+    "slug": "Wikipedia-App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
